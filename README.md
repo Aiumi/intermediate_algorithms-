@@ -1,2 +1,2 @@
 # intermediate_algorithms-
-Intermediate algorithm challenges from FreeCodeCamp
+Intermediate algorithm challenges from freecodecamp.com
