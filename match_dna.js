@@ -15,7 +15,7 @@ function pair(str) {
   return newArr;
 }
 
-/* ALTERNATIVE METHOD
+/* ALTERNATIVE METHODS
 function pair(str) {
   var pairs = [["A","T"], ["T", "A"], ["C", "G"], ["G", "C"]];
   function findLover(letter) {
@@ -24,5 +24,34 @@ function pair(str) {
     });
   }
   return str.split("").map(findLover).reduce(function(a,b) { return a.concat(b); });
+}
+
+function pair(str) {
+  var pairs = ["AT", "TA", "CG", "GC"]; 
+  var newArr = [];
+  for (var i = 0; i < str.length; i++) {
+    for (var j = 0; j < pairs.length; j++) {
+      if (str.charAt(i) === pairs[j].charAt(0)) {
+        newArr.push(pairs[j].split(""));
+      }  
+    }
+  }   
+  return newArr;
+}
+
+function pair(str) {
+  var pairs = ["AT", "CG"]; 
+  var newArr = [];
+  for(var i = 0; i < str.length; i++) {
+    for(var j = 0; j < pairs.length; j++) {
+      if(pairs[j].indexOf(str.charAt(i)) === 0) {
+        newArr.push(pairs[j].split(""));
+      }
+      else if(pairs[j].indexOf(str.charAt(i)) == 1) {
+        newArr.push(pairs[j].split("").reverse());
+      }
+    }
+  }   
+  return newArr;
 }
 */
