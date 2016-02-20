@@ -14,3 +14,15 @@ function pair(str) {
     }
   return newArr;
 }
+
+/* ALTERNATIVE METHOD
+function pair(str) {
+  var pairs = [["A","T"], ["T", "A"], ["C", "G"], ["G", "C"]];
+  function findLover(letter) {
+    return pairs.filter(function(pair) {
+      return pair[0] === letter;
+    });
+  }
+  return str.split("").map(findLover).reduce(function(a,b) { return a.concat(b); });
+}
+*/
